@@ -15,6 +15,7 @@ using Microsoft.OpenApi.Models;
 using my_books.Data;
 using my_books.Data.Services;
 using my_books.Exceptions;
+using Microsoft.AspNetCore.Mvc.Versioning;
 
 namespace my_books
 {
@@ -38,6 +39,18 @@ namespace my_books
             services.AddTransient<BooksService>();
             services.AddTransient<PublisherService>();
             services.AddTransient<AuthorService>();
+
+             services.AddApiVersioning(); // without default version
+            services.AddApiVersioning(config =>
+            {
+                // set default version
+                // this make swagger not work because all route must be uniqe
+                config.AssumeDefaultVersionWhenUnspecified = true;
+                config.DefaultApiVersion = new ApiVersion(1, 0);
+
+                // set multiple version for one controller and access to action methods by request header
+                config.ApiVersionReader = new HeaderApiVersionReader("custom-version-header");
+            });
 
 
             services.AddSwaggerGen(c =>

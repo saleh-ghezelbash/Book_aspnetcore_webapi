@@ -1,0 +1,59 @@
+2022-02-27 18:52:47.140 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-27 18:52:47.159 +03:30 [INF] Hosting environment: Development
+2022-02-27 18:52:47.161 +03:30 [INF] Content root path: C:\Users\sghez_000\Desktop\test\webapi\my_books
+2022-02-27 18:52:47.193 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/swagger/index.html - -
+2022-02-27 18:52:47.785 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/swagger/index.html - - - 200 - text/html;charset=utf-8 596.8760ms
+2022-02-27 18:52:47.799 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - -
+2022-02-27 18:52:47.817 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - - - 200 11941 application/javascript;+charset=utf-8 17.5793ms
+2022-02-27 18:52:47.956 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - -
+2022-02-27 18:52:47.958 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - - - 200 11941 application/javascript;+charset=utf-8 1.8588ms
+2022-02-27 18:52:48.099 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/swagger/v1/swagger.json - -
+2022-02-27 18:52:48.385 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 285.3495ms
+2022-02-27 18:53:06.593 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/api/Publisher/get-all-publishers - -
+2022-02-27 18:53:06.647 +03:30 [INF] Executing endpoint 'my_books.Controllers.PublisherController.GetAllPublishers (my_books)'
+2022-02-27 18:53:06.684 +03:30 [INF] Route matched with {action = "GetAllPublishers", controller = "Publisher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublishers(System.String, System.String, Int32) on controller my_books.Controllers.PublisherController (my_books).
+2022-02-27 18:53:06.881 +03:30 [INF] This is a log in GetAllPublishers()
+2022-02-27 18:53:07.806 +03:30 [INF] Entity Framework Core 5.0.2 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-02-27 18:53:08.673 +03:30 [INF] Executed DbCommand (91ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+ORDER BY [p].[Name]
+2022-02-27 18:53:08.777 +03:30 [INF] Executing OkObjectResult, writing value of type 'my_books.Data.Paging.PaginatedList`1[[my_books.Data.Models.Publisher, my_books, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-27 18:53:08.797 +03:30 [INF] Executed action my_books.Controllers.PublisherController.GetAllPublishers (my_books) in 2105.1305ms
+2022-02-27 18:53:08.797 +03:30 [INF] Executed endpoint 'my_books.Controllers.PublisherController.GetAllPublishers (my_books)'
+2022-02-27 18:53:08.803 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/api/Publisher/get-all-publishers - - - 200 - application/json;+charset=utf-8 2209.4839ms
+2022-02-27 19:07:18.371 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-27 19:07:18.448 +03:30 [INF] Hosting environment: Development
+2022-02-27 19:07:18.454 +03:30 [INF] Content root path: C:\Users\sghez_000\Desktop\test\webapi\my_books
+2022-02-27 19:07:18.502 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/swagger/index.html - -
+2022-02-27 19:07:20.128 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - -
+2022-02-27 19:07:20.156 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/swagger/index.html - - - 200 - text/html;charset=utf-8 1678.6359ms
+2022-02-27 19:07:20.174 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - - - 200 11941 application/javascript;+charset=utf-8 45.5446ms
+2022-02-27 19:07:20.255 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - -
+2022-02-27 19:07:20.265 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js - - - 200 11941 application/javascript;+charset=utf-8 9.8046ms
+2022-02-27 19:07:21.152 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/swagger/v1/swagger.json - -
+2022-02-27 19:07:21.690 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Test/get-test-data" for actions - my_books.Controllers.v2.TestController.Get (my_books),my_books.Controllers.v1.TestController.Get (my_books),my_books.Controllers.v1.TestController.Getv11 (my_books). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-02-27 19:07:21.818 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/swagger/v1/swagger.json - - - 500 - text/plain 665.7395ms
+2022-02-27 19:07:49.369 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/api/publisher/get-all-publisher - -
+2022-02-27 19:07:49.424 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/api/publisher/get-all-publisher - - - 404 - - 54.8373ms
+2022-02-27 19:08:13.650 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/api/publisher/get-all-publishers - -
+2022-02-27 19:08:13.677 +03:30 [INF] Executing endpoint 'my_books.Controllers.PublisherController.GetAllPublishers (my_books)'
+2022-02-27 19:08:13.725 +03:30 [INF] Route matched with {action = "GetAllPublishers", controller = "Publisher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublishers(System.String, System.String, Int32) on controller my_books.Controllers.PublisherController (my_books).
+2022-02-27 19:08:13.874 +03:30 [INF] This is a log in GetAllPublishers()
+2022-02-27 19:08:14.726 +03:30 [INF] Entity Framework Core 5.0.2 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-02-27 19:08:15.403 +03:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+ORDER BY [p].[Name]
+2022-02-27 19:08:15.508 +03:30 [INF] Executing OkObjectResult, writing value of type 'my_books.Data.Paging.PaginatedList`1[[my_books.Data.Models.Publisher, my_books, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-27 19:08:15.528 +03:30 [INF] Executed action my_books.Controllers.PublisherController.GetAllPublishers (my_books) in 1795.3179ms
+2022-02-27 19:08:15.528 +03:30 [INF] Executed endpoint 'my_books.Controllers.PublisherController.GetAllPublishers (my_books)'
+2022-02-27 19:08:15.534 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/api/publisher/get-all-publishers - - - 200 - application/json;+charset=utf-8 1884.6710ms
+2022-02-27 19:08:15.592 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/favicon.ico - -
+2022-02-27 19:08:15.594 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/favicon.ico - - - 404 - - 1.6802ms

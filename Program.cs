@@ -18,7 +18,7 @@ namespace my_books
             {
 
             Log.Logger = new LoggerConfiguration()
-                    .WriteTo.File("Logs/log.txt")
+                    .WriteTo.File("Logs/log.txt",rollingInterval:RollingInterval.Day)
                     .CreateLogger();
             CreateHostBuilder(args).Build().Run();
             }

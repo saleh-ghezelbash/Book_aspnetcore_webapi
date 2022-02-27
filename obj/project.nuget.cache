@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q96C/fdE4fIuZAMljrK7AjnVeL8IGr+kpQqdFczQmgjKZREIGxa/1EDUpdgFw3bnYlX3w0U+f8tPRcXprZjiJg==",
+  "dgSpecHash": "ycgkVw4y3yyU69pKDIX5Vrp/cHh9X7T0FKksCG9v2FvTOczZRPk4dbKajv6t03zla6HqzCjJrAyF9/nYG29WXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\sghez_000\\Desktop\\test\\webapi\\my_books\\my_books.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\sghez_000\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\sghez_000\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\sghez_000\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\sghez_000\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\sghez_000\\.nuget\\packages\\microsoft.azure.services.appauthentication\\1.4.0\\microsoft.azure.services.appauthentication.1.4.0.nupkg.sha512",
     "C:\\Users\\sghez_000\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\sghez_000\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
