@@ -1,16 +1,24 @@
-2022-02-27 19:10:35.478 +03:30 [INF] Application started. Press Ctrl+C to shut down.
-2022-02-27 19:10:35.504 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:44359/api/publisher/get-all-publishers - -
-2022-02-27 19:10:35.530 +03:30 [INF] Hosting environment: Development
-2022-02-27 19:10:35.530 +03:30 [INF] Content root path: C:\Users\sghez_000\Desktop\test\webapi\my_books
-2022-02-27 19:10:35.636 +03:30 [INF] Executing endpoint 'my_books.Controllers.PublisherController.GetAllPublishers (my_books)'
-2022-02-27 19:10:35.671 +03:30 [INF] Route matched with {action = "GetAllPublishers", controller = "Publisher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublishers(System.String, System.String, Int32) on controller my_books.Controllers.PublisherController (my_books).
-2022-02-27 19:10:35.846 +03:30 [INF] This is a log in GetAllPublishers()
-2022-02-27 19:10:36.913 +03:30 [INF] Entity Framework Core 5.0.2 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
-2022-02-27 19:10:37.574 +03:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
-SELECT [p].[Id], [p].[Name]
-FROM [Publishers] AS [p]
-ORDER BY [p].[Name]
-2022-02-27 19:10:37.680 +03:30 [INF] Executing OkObjectResult, writing value of type 'my_books.Data.Paging.PaginatedList`1[[my_books.Data.Models.Publisher, my_books, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-2022-02-27 19:10:37.740 +03:30 [INF] Executed action my_books.Controllers.PublisherController.GetAllPublishers (my_books) in 2061.4477ms
-2022-02-27 19:10:37.741 +03:30 [INF] Executed endpoint 'my_books.Controllers.PublisherController.GetAllPublishers (my_books)'
-2022-02-27 19:10:37.756 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:44359/api/publisher/get-all-publishers - - - 200 - application/json;+charset=utf-8 2257.6678ms
+02/27/2022 19:35:19 +03:30 [Information] - Message: This is a log in GetAllPublishers()
+02/27/2022 19:52:42 +03:30 [Information] - Message: This is a log in GetAllPublishers()
+02/27/2022 19:55:02 +03:30 [Information] - Message: This is a log in GetAllPublishers()
+02/27/2022 20:48:14 +03:30 [Information] - Message: This is a log in GetAllPublishers()
+02/27/2022 20:54:11 +03:30 [Information] - Message: This is a log in GetAllPublishers()
+02/27/2022 20:57:34 +03:30 [Information] - Message: This is a log in GetAllPublishers()
+02/27/2022 21:04:37 +03:30 [Error] - Message: An unhandled exception has occurred while executing the request.
+System.Exception: my custom error
+   at my_books.Controllers.PublisherController.GetAllPublishers(String sortBy, String searchString, Int32 pageNumber) in C:\Users\sghez_000\Desktop\test\webapi\my_books\Controllers\PublisherController.cs:line 48
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+02/27/2022 21:04:37 +03:30 [Error] - Message: {"StatusCode":500,"Message":"my custom error","Path":"/api/Publisher/get-all-publishers"}

@@ -39,18 +39,19 @@ namespace my_books
             services.AddTransient<BooksService>();
             services.AddTransient<PublisherService>();
             services.AddTransient<AuthorService>();
+            services.AddTransient<LogsService>();
 
-             services.AddApiVersioning(); // without default version
-            services.AddApiVersioning(config =>
-            {
-                // set default version
-                // this make swagger not work because all route must be uniqe
-                config.AssumeDefaultVersionWhenUnspecified = true;
-                config.DefaultApiVersion = new ApiVersion(1, 0);
+            // services.AddApiVersioning(); // without default version
+            //services.AddApiVersioning(config =>
+            //{
+            //    // set default version
+            //    // this make swagger not work because all route must be uniqe
+            //    config.AssumeDefaultVersionWhenUnspecified = true;
+            //    config.DefaultApiVersion = new ApiVersion(1, 0);
 
-                // set multiple version for one controller and access to action methods by request header
-                config.ApiVersionReader = new HeaderApiVersionReader("custom-version-header");
-            });
+            //    // set multiple version for one controller and access to action methods by request header
+            //    config.ApiVersionReader = new HeaderApiVersionReader("custom-version-header");
+            //});
 
 
             services.AddSwaggerGen(c =>
@@ -60,7 +61,7 @@ namespace my_books
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -74,7 +75,7 @@ namespace my_books
             app.UseRouting();
 
             app.UseAuthorization();
-            //app.ConfigureBuildInExceptionHandler();
+            app.ConfigureBuildInExceptionHandler(loggerFactory);
             //app.ConfigureCustomExceptionHandler();
 
             app.UseEndpoints(endpoints =>

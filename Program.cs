@@ -17,10 +17,19 @@ namespace my_books
             try
             {
 
-            Log.Logger = new LoggerConfiguration()
-                    .WriteTo.File("Logs/log.txt",rollingInterval:RollingInterval.Day)
+                var configuration = new ConfigurationBuilder()
+                        .AddJsonFile("appsettings.json")
+                        .Build();
+
+                Log.Logger = new LoggerConfiguration()
+                    .ReadFrom.Configuration(configuration)
                     .CreateLogger();
-            CreateHostBuilder(args).Build().Run();
+
+                //Log.Logger = new LoggerConfiguration()
+                //    .WriteTo.File("Logs/log.txt", rollingInterval: RollingInterval.Day)
+                //    .CreateLogger();
+
+                CreateHostBuilder(args).Build().Run();
             }
             finally
             {
